@@ -1,6 +1,7 @@
 {{ config(
     materialized='table',
     schema=var('target_dataset_id'),
+    alias='google_ads_final_dbt',
     cluster_by=['Campaign', 'AdGroupName', 'Date']
 ) }}
 
